@@ -1,10 +1,10 @@
 import React from "react"
 
-const Header = () => (
-  <header>
+const Banner = () => (
+  <section>
     <h1>Maureen Holland</h1>
     <h2>writer &amp; web developer</h2>
-  </header>
+  </section>
 )
 
-export default Header
+export default Banner
