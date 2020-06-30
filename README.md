@@ -10,5 +10,6 @@
 - cons: counter-intuitive to combine css and js when you learned separation of concerns as gospel, not sure what this means for the "cascading" part of css
 
 ## Thanks
+- Inspiration from [Brittany Chiang's portfolio site](https://brittanychiang.com/) 
 - [Introduction to Gatsby Frontend Masters course](https://frontendmasters.com/courses/gatsby/)
 - [CSS Tricks tutorial on theme toggling](https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/)
