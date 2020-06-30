@@ -1,9 +1,15 @@
 export const dark = {
-    backgroundSolid: "rgb(7, 16, 21)",
-    colorAccent: "rgb(242, 214, 163)"
+    colors: {
+        background: "rgb(52,51,52)",
+        main: "rgb(251, 246, 238)",
+        accent: "rgb(242, 214, 163)"
+    }
 }
 
 export const light = {
-    backgroundSolid: "rgb(242, 214, 163)",
-    colorAccent: "rgb(7, 16, 21)"
+    colors: {
+        background: "rgb(251, 246, 238)",
+        main: "rgb(7, 16, 21)",
+        accent: "rgb(242, 214, 163)"
+    }
 }

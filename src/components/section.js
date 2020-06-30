@@ -1,11 +1,10 @@
 import React from 'react'
+import Title from './title'
 
 const Section = ({ children, title }) => (
     <section className={`section section--${title.toLowerCase()}`}>
-        <div className="wrapper">
-            <h2>{title}</h2>
-            {children}
-        </div>
+        <Title content={title} />
+        {children}
     </section>
 );
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { ThemeProvider } from 'emotion-theming'
+import { ThemeProvider } from "emotion-theming"
+import { Global, css } from "@emotion/core"
 
 // import Image from "../components/image"
 import SEO from "../components/seo"
@@ -22,8 +23,38 @@ const App = () => {
     }
   }
 
+  // check order of operations, rendering
+  const styles = theme === 'dark' ? dark : light
+
   return (
-    <ThemeProvider theme={theme === 'dark' ? dark : light}>
+    <ThemeProvider theme={styles}>
+      <Global
+        styles={css`
+          *,
+          *::after,
+          *::before {
+            box-sizing: border-box;
+          }
+
+          body {
+            margin: 0;
+            background: ${styles.colors.background};
+            color: ${styles.colors.main};
+            font-family: 'josefin sans';
+            font-size: 18px;
+          }
+
+          .title {
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 1.6rem;
+          }
+
+          h1.title {
+            font-size: 2rem;
+          }
+        `}
+      />
       <SEO title="Maureen Holland" />
       <Header/>
       <Banner/>

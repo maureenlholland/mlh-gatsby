@@ -8,10 +8,8 @@ const Header = () => {
   return (
     <header
       css={css`
-        background: ${theme.backgroundSolid};
-        color: ${theme.colorAccent};
-        padding: 10px;
-        transition: background 0.25s, color 0.25s;
+        color: ${theme.colors.accent};
+        background: rgb(7, 16, 21);
       `}
     >
           <span aria-label="logo">MH</span>
