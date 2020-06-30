@@ -1,9 +1,10 @@
 import React from "react"
+import Section from './section'
 
 const Projects = () => (
-  <section>
-    <h2>Projects</h2>
-  </section>
+  <Section title="Projects">
+    <p>Projects grid goes here</p>
+  </Section>
 )
 
 export default Projects
