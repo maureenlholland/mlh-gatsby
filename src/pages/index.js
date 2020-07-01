@@ -45,6 +45,7 @@ const App = () => {
             font-family: 'josefin sans';
             font-size: 18px;
             transition: background 0.2s, color 0.2s;
+            line-height: 1.8;
           }
 
           h1,
@@ -62,13 +63,20 @@ const App = () => {
 
           .box {
             border: 1px solid ${styles.colors.main};
+            background: ${styles.colors.background};
             padding: 20px;
           }
         `}
       />
       <SEO title="Maureen Holland" />
       <Header/>
-      {/* <Bg/> */}
+      <Bg
+        css={css`
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+        `}
+      />
       <Banner/>
       <About/>
       <Quote/>

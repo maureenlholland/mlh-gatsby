@@ -1,9 +1,15 @@
 import React from "react"
 import Section from './section'
+import Title from './title'
 
 const About = () => (
-  <Section title="About">
-    <p>Proident excepteur sint elit sint excepteur ipsum Lorem magna culpa. Commodo veniam sit anim voluptate reprehenderit anim ipsum et veniam occaecat sit sit. Excepteur ut elit laborum incididunt adipisicing irure fugiat esse ad cillum esse. Nisi ut consequat tempor et. Commodo incididunt id Lorem fugiat officia laboris ad ad minim. Voluptate nisi pariatur magna irure laboris sint in nulla sit officia officia mollit fugiat pariatur. Consectetur non reprehenderit excepteur ipsum pariatur est minim nostrud aliquip voluptate commodo.</p>
+  <Section>
+    <div className="box">
+      <Title content="About" />
+      <p>I am extremely introverted and incredibly curious.</p>
+      <p>I went to the University of Toronto for English and Cinema Studies and am as surprised as anyone that I learned to code. Turns out watching Silicon Valley while under-employed can be very motivating.</p>
+      <p>The career switch fit because web development feeds both the creative and logical parts of my brain. Every day is an opportunity to build something new or fix something old.</p>
+    </div>
   </Section>
 )
 
