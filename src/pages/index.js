@@ -11,10 +11,12 @@ import Quote from "../components/quote"
 import Projects from "../components/projects"
 import Footer from "../components/footer"
 import { dark, light } from '../components/theme'
+import Bg from "../assets/bg.svg"
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
+  // todo => add custom hook: https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/#the-usedarkmode-hook
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
@@ -42,21 +44,31 @@ const App = () => {
             color: ${styles.colors.main};
             font-family: 'josefin sans';
             font-size: 18px;
+            transition: background 0.2s, color 0.2s;
+          }
+
+          h1,
+          h2,
+          h3 {
+            margin: 0;
           }
 
           .title {
+            text-align: center;
             text-transform: uppercase;
-            letter-spacing: 0.1rem;
             font-size: 1.6rem;
+            font-weight: normal;
           }
 
-          h1.title {
-            font-size: 2rem;
+          .box {
+            border: 1px solid ${styles.colors.main};
+            padding: 20px;
           }
         `}
       />
       <SEO title="Maureen Holland" />
       <Header/>
+      {/* <Bg/> */}
       <Banner/>
       <About/>
       <Quote/>

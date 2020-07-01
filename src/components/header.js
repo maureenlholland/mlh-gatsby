@@ -1,21 +1,21 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { useTheme } from "emotion-theming"
+import { dark } from "./theme"
 
-const Header = () => {
-  const theme = useTheme()
-
-  return (
-    <header
+const Header = () => (
+  <header
       css={css`
-        color: ${theme.colors.accent};
+        color: ${dark.colors.accent};
         background: rgb(7, 16, 21);
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
       `}
     >
           <span aria-label="logo">MH</span>
           <nav>Menu (icon)</nav>
     </header>
-  )
-}
+)
 
 export default Header;
