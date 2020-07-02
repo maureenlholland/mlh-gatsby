@@ -4,10 +4,14 @@ import { useTheme } from "emotion-theming"
 
 import Section from './section'
 import Title from './title'
+import Project from './project'
+import useProjects from '../hooks/use-projects'
 
 const Projects = () => {
   const theme = useTheme();
   const rgbValues = (theme.colors.background).match(/rgb\((.*)\)/)[1];
+  const projects = useProjects();
+  console.log(projects)
 
   return (
     <Section className="projects"
@@ -21,16 +25,7 @@ const Projects = () => {
         padding-top: 50px;
       `}
       >
-        <li>
-          {/* img goes here */}
-          <h3>Project title</h3>
-          <p
-            css={css`
-              margin: 0;
-            `}
-          >
-            Info about project. Info about project. Info about project.  Info about project.  Info about project.  Info about project.  Info about project. Info about project. Info about project. vInfo about project. vInfo about project. vInfo about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project. Info about project.</p>
-        </li>
+        {projects.map(project => <Project key={project.id} project={project}/>)}
       </ul>
     </Section>
   )
