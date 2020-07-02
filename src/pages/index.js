@@ -38,8 +38,16 @@ const App = () => {
             box-sizing: border-box;
           }
 
-          body {
+          body,
+          h1,
+          h2,
+          h3,
+          ul, 
+          li {
             margin: 0;
+          }
+
+          body {
             background: ${styles.colors.background};
             color: ${styles.colors.main};
             font-family: 'josefin sans';
@@ -48,17 +56,16 @@ const App = () => {
             line-height: 1.8;
           }
 
-          h1,
-          h2,
-          h3 {
-            margin: 0;
-          }
-
           .title {
             text-align: center;
             text-transform: uppercase;
             font-size: 1.6rem;
             font-weight: normal;
+          }
+
+          .section--projects .title,
+          .footer .title {
+            padding-top: 50px;
           }
 
           .box {

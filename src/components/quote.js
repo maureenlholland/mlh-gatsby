@@ -4,7 +4,6 @@ import { useTheme } from "emotion-theming"
 
 const Quote = () => {
   const theme = useTheme()
-  console.log(theme);
 
   return (
     <blockquote
