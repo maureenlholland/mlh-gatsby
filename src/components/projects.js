@@ -11,18 +11,17 @@ const Projects = () => {
   const theme = useTheme();
   const rgbValues = (theme.colors.background).match(/rgb\((.*)\)/)[1];
   const projects = useProjects();
-  console.log(projects)
 
   return (
     <Section className="projects"
       css={css`
-        background: rgba(${rgbValues}, 0.8);
+        background: rgba(${rgbValues}, 0.7);
       `}
     >
       <Title content="Projects" />
       <ul
         css={css`
-        padding-top: 50px;
+          padding-top: 50px;
       `}
       >
         {projects.map(project => <Project key={project.id} project={project}/>)}

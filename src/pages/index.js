@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { ThemeProvider } from "emotion-theming"
 import { Global, css } from "@emotion/core"
 
-// import Image from "../components/image"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Banner from "../components/banner"
@@ -45,6 +44,11 @@ const App = () => {
           ul, 
           li {
             margin: 0;
+          }
+
+          ul {
+            padding: 0;
+            list-style: none;
           }
 
           body {

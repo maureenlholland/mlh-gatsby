@@ -17,9 +17,10 @@ const useProjects= () => {
                         },
                         imageAlt,
                         github,
-                        live
+                        live,
+                        skills,
+                        desc
                     }
-                    body
                 }
             }
         }
@@ -32,7 +33,8 @@ const useProjects= () => {
         imageAlt: project.frontmatter.imageAlt,
         github: project.frontmatter.github,
         live: project.frontmatter.live,
-        body: project.body
+        skills: project.frontmatter.skills,
+        desc: project.frontmatter.desc
     }));
 }
 
