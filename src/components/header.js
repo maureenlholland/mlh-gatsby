@@ -6,7 +6,7 @@ const Header = () => (
   <header
       css={css`
         color: ${dark.colors.accent};
-        background: rgb(7, 16, 21);
+        background: ${dark.colors.backgroundAlt};
         position: fixed;
         top: 0;
         z-index: 1;
