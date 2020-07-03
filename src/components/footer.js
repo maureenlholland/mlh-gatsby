@@ -2,14 +2,70 @@ import React from "react"
 import { css } from "@emotion/core"
 import {
   FaEnvelope,
-  FaLinkedin,
+  FaLinkedinIn,
   FaGithubSquare,
   FaSun,
   FaMoon
 } from 'react-icons/fa';
+import { useTheme } from "emotion-theming";
 
 import { dark } from "./theme"
 import Title from "./title"
+
+const contact = {
+  linkedin: {
+    text: 'LinkedIn',
+    icon: FaLinkedinIn
+  },
+  email: {
+    text: 'Email',
+    icon: FaEnvelope
+  },
+  github: {
+    text: 'Github',
+    icon: FaGithubSquare
+  }
+}
+
+const Toggle = () => {
+  const theme = useTheme();
+
+  return (
+    <div
+        css={css`
+          border: 3px solid ${dark.colors.main};
+          border-radius: 50px;
+          background: #304D58;
+          grid-area: 1 / 3 / 2 / 5;
+          padding: 3px;
+        `}
+      >
+        <div
+          css={css`
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: ${dark.colors.main};
+            grid-area: 1 / 4 / 2 / 5;
+            position: relative;
+            left: ${theme.toggle.left};
+            transition: left 0.2s;
+          `}
+        ></div>
+      </div>
+  )
+}
+
+const ContactItem = ({ type }) => {
+  const item = contact[type];
+  const Icon = item.icon;
+  return (
+    <li>
+          <span className="visually-hidden">${item.text}</span>
+          <Icon />
+    </li>
+  ) 
+}
 
 const Footer = ({ setLightTheme, setDarkTheme }) => (
   <footer
@@ -29,23 +85,14 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
 
         /* to do: add links and hover/focus styles */
         svg {
-          font-size: 2rem;
-          margin: 10px;
+          font-size: 2.5rem;
+          margin: 0 30px;
         }
       `}
     >
-      <li>
-        <span className="visually-hidden">Email</span>
-        <FaEnvelope/>
-      </li>
-      <li>
-        <span className="visually-hidden">LinkedIn</span>
-        <FaLinkedin/>
-      </li>
-      <li>
-        <span className="visually-hidden">GitHub</span>
-        <FaGithubSquare/>
-      </li>
+      <ContactItem type="linkedin"/>
+      <ContactItem type="email"/>
+      <ContactItem type="github"/>
     </ul>
     <ul
       css={css`
@@ -53,20 +100,24 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
         display: grid;
         grid-template-rows: 1fr;
         /* name lines? toggle-ui-start toggle-ui-end */
-        grid-template-columns: 1fr 40px 40px 40px 40px 1fr;
+        grid-template-columns: 1fr 50px 40px 40px 50px 1fr;
         grid-template-areas:
         ". light light dark dark .";
         cursor: pointer;
 
         button {
-          color: ${dark.colors.main};
-          padding: 10px;
-          width: 100%;
           display: block;
+          width: 100%;
+          height: 100%;
           background: transparent;
           border: transparent;
           position: relative;
-          z-index: 100;
+          z-index: 1;
+          color: ${dark.colors.main};
+        }
+
+        svg {
+          font-size: 1.7rem;
         }
       `}
     >
@@ -92,30 +143,7 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
           <FaMoon/>
         </button>
       </li>
-      {/* shouldn't have div nested in ul, bad html structure, but need nested toggle container so after/before elements are a nightmare to position */}
-      <div
-        css={css`
-          border: 3px solid ${dark.colors.main};
-          border-radius: 50px;
-          background: #304D58;
-          grid-area: 1 / 3 / 2 / 5;
-          padding: 3px;
-        `}
-      >
-        <div
-          css={css`
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: ${dark.colors.main};
-            grid-area: 1 / 4 / 2 / 5;
-            position: relative;
-            left: 0;
-            /* todo: add transition on click */
-            /* left: calc(100% - 25px); */
-          `}
-        ></div>
-      </div>
+      <Toggle/>
     </ul>
   </footer>
 )

@@ -4,6 +4,9 @@ export const dark = {
         backgroundAlt: "rgb(7,16,21)",
         main: "rgb(251, 246, 238)",
         accent: "rgb(242, 214, 163)"
+    },
+    toggle: {
+        left: "calc(100% - 25px)"
     }
 }
 
@@ -13,5 +16,8 @@ export const light = {
         backgroundAlt: "rgb(242, 214, 163)",
         main: "rgb(7, 16, 21)",
         accent: "rgb(7, 16, 21)"
+    },
+    toggle: {
+        left: "0"
     }
 }
