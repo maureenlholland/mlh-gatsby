@@ -15,15 +15,11 @@ const Projects = () => {
   return (
     <Section className="projects"
       css={css`
-        background: rgba(${rgbValues}, 0.7);
+        background: rgba(${rgbValues}, 0.9);
       `}
     >
       <Title content="Projects" />
-      <ul
-        css={css`
-          padding-top: 50px;
-      `}
-      >
+      <ul>
         {projects.map(project => <Project key={project.id} project={project}/>)}
       </ul>
     </Section>
