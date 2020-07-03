@@ -12,10 +12,22 @@ const Header = () => (
         top: 0;
         z-index: 1;
         width: 100%;
+        padding: 10px;
       `}
     >
-          <span aria-label="logo">MH</span>
-          <nav>Menu (icon)</nav>
+          <svg
+            css={css`
+              width: 30px;
+              display: block;
+              margin-left: auto;
+            `}
+            viewBox="0 0 100 100"
+            stroke={`${dark.colors.accent}`} stroke-width="7px"
+          >
+            <line x1="0" y1="80" x2="100" y2="80" />
+            <line x1="0" y1="50" x2="100" y2="50" />
+            <line x1="0" y1="20" x2="100" y2="20" />
+          </svg>
     </header>
 )
 
