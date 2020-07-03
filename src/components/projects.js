@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <Section className="projects"
       css={css`
-        background: rgba(${rgbValues}, 0.9);
+        background: rgba(${rgbValues}, 0.8);
       `}
     >
       <Title content="Projects" />

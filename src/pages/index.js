@@ -15,14 +15,9 @@ import Bg from "../assets/bg.svg"
 const App = () => {
   const [theme, setTheme] = useState('dark');
 
-  // todo => add custom hook: https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/#the-usedarkmode-hook
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  }
+  // todo => persist user choice on return visit
+  const setDarkTheme = () => setTheme('dark');
+  const setLightTheme = () => setTheme('light');
 
   // check order of operations, rendering
   const styles = theme === 'dark' ? dark : light
@@ -60,6 +55,17 @@ const App = () => {
             line-height: 1.8;
           }
 
+          /* from Scott O'Hara: https://css-tricks.com/inclusively-hidden/ */
+          .visually-hidden {
+            clip: rect(0 0 0 0); 
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap; 
+            width: 1px;
+          }
+
           .title {
             text-align: center;
             text-transform: uppercase;
@@ -93,7 +99,10 @@ const App = () => {
       <About/>
       <Quote/>
       <Projects/>
-      <Footer toggleTheme={toggleTheme} />
+      <Footer
+        setDarkTheme={setDarkTheme}
+        setLightTheme={setLightTheme}
+      />
     </ThemeProvider>
   )
 }

@@ -48,7 +48,6 @@ const Desc = ({ desc }) => <p css={css` grid-area: desc; margin-top: 25px;`}>{de
 
 const Link = ({ href, name }) => {
     const theme = useTheme();
-    const rgbValues = (theme.colors.backgroundAlt).match(/rgb\((.*)\)/)[1];
 
     return (
         <a
@@ -87,7 +86,7 @@ const Project = ({ project }) => {
                 ". desc ."
                 ". live ."
                 ". github ."
-                ". . .";
+                ". icon .";
             `}
         >
             <Image
