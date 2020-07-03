@@ -66,6 +66,8 @@ const App = () => {
             width: 1px;
           }
 
+          [hidden] { display: none; }
+
           .title {
             text-align: center;
             text-transform: uppercase;
@@ -74,7 +76,7 @@ const App = () => {
           }
 
           .section--projects .title,
-          .footer .title {
+          .contact .title {
             padding-top: 50px;
           }
 

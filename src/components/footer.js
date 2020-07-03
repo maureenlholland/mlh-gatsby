@@ -9,7 +9,8 @@ import ThemeToggle from "./theme-toggle";
 
 const Footer = ({ setLightTheme, setDarkTheme }) => (
   <footer
-    className="footer"
+    id="contact"
+    className="contact"
     css={css`
       padding-bottom: 50px;
       background: ${dark.colors.backgroundAlt};

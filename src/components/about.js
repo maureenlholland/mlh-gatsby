@@ -4,7 +4,7 @@ import Section from './section'
 import Title from './title'
 
 const About = () => (
-  <Section className="about">
+  <Section id="about">
     <div className="box">
       <Title content="About" />
       <p>I am extremely introverted and incredibly curious.</p>

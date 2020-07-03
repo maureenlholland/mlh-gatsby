@@ -1,5 +1,4 @@
 import React from "react"
-import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
 
 import Section from './section'
@@ -13,10 +12,8 @@ const Projects = () => {
   const projects = useProjects();
 
   return (
-    <Section className="projects"
-      css={css`
-        background: rgba(${rgbValues}, 0.8);
-      `}
+    <Section id="projects"
+      styles={`background: rgba(${rgbValues}, 0.8);`}
     >
       <Title content="Projects" />
       <ul>
