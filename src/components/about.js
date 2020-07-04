@@ -1,11 +1,12 @@
 import React from "react"
+import { css } from "@emotion/core"
 
 import Section from './section'
 import Title from './title'
 
 const About = () => (
   <Section id="about">
-    <div className="box">
+    <div className="box" css={css`padding: 35px 20px`}>
       <Title content="About" />
       <p>I am extremely introverted and incredibly curious.</p>
       <p>I graduated from the University of Toronto with an Honours Bachelor of Arts in English and Cinema Studies. I decided to try coding while under-employed and watching Silicon Valley.</p>

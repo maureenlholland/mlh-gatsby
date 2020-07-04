@@ -12,7 +12,7 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
     id="contact"
     className="contact"
     css={css`
-      padding-bottom: 50px;
+      padding: 50px 20px;
       background: ${dark.colors.backgroundAlt};
       color: ${dark.colors.main};
     `}

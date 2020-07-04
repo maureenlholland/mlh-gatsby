@@ -76,6 +76,7 @@ const Link = ({ href, name }) => {
                     }
                 }
 
+                /* look into reduced motion or removing transition based on user pref. */
                 .draw-me {
                     stroke-dasharray: 500;
                     stroke-dashoffset: 500;
@@ -87,12 +88,13 @@ const Link = ({ href, name }) => {
                     outline: none;
                     .draw-me {
                         stroke-dashoffset: 0;
-                        transition: stroke-dashoffset ease-in 0.8s;
+                        transition: stroke-dashoffset ease-in 1.2s;
                     }
                 }
             `}
             href={href}
         >
+            {/* todo: fix responsiveness for less than 400px */}
             <Deco/>
             <span css={css`margin: 0 10px;`}>View {name}</span>
             <Deco/>

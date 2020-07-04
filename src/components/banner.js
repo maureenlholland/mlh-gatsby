@@ -12,14 +12,18 @@ const Banner = () => (
       css={css`
         position: relative;
         top: 30%;
+        padding: 60px 10px;
       `}
     >
       <h1
         className="title"
         css={css`
+          max-width: 350px;
+          width: 100%;
+          text-align: center;
           line-height: 1.3;
           font-size: 55px;
-          margin: 0;
+          margin: 0 auto;
         `}
       >
         Maureen Holland
@@ -29,6 +33,7 @@ const Banner = () => (
         css={css`
           margin-top: 20px;
           text-transform: lowercase;
+          font-size: 1.5rem;
       `}
       >
         writer &amp; web developer

@@ -20,7 +20,7 @@ const App = () => {
   const setLightTheme = () => setTheme('light');
 
   // check order of operations, rendering
-  const styles = theme === 'dark' ? dark : light
+  const styles = theme === 'dark' ? dark : light;
 
   return (
     <ThemeProvider theme={styles}>
@@ -69,19 +69,14 @@ const App = () => {
           .title {
             text-align: center;
             text-transform: uppercase;
-            font-size: 1.6rem;
+            font-size: 2rem;
             font-weight: normal;
-          }
-
-          .section--projects .title,
-          .contact .title {
-            padding-top: 50px;
+            line-height: 1;
           }
 
           .box {
             border: 1px solid ${styles.colors.main};
             background: ${styles.colors.background};
-            padding: 20px;
           }
         `}
       />

@@ -6,18 +6,23 @@ import {
     FaGithubSquare
   } from 'react-icons/fa';
 
+import { dark } from "./theme"
+
 const contact = {
     linkedin: {
         text: 'LinkedIn',
-        icon: FaLinkedinIn
+        icon: FaLinkedinIn,
+        link: 'https://ca.linkedin.com/in/maureenlholland'
     },
     email: {
         text: 'Email',
-        icon: FaEnvelope
+        icon: FaEnvelope,
+        link: 'mailto: maureen.holland11@gmail.com"'
     },
     github: {
         text: 'Github',
-        icon: FaGithubSquare
+        icon: FaGithubSquare,
+        link: 'https://github.com/maureenlholland'
     }
 }
 
@@ -26,8 +31,33 @@ const ContactItem = ({ type }) => {
     const Icon = item.icon;
     return (
         <li>
-            <span className="visually-hidden">${item.text}</span>
-            <Icon />
+            <a
+              href={item.link}
+              css={css`
+                color: white;
+                .icon-container {
+                  margin: 0 5px;
+                  display: flex;
+                  padding: 15px;
+                  border-radius: 50%;
+                  transition: color 0.2s, background 0.2s;
+                }
+                svg {
+                  font-size: 3rem;
+                }
+                &:hover,
+                &:focus {
+                  .icon-container {
+                    background: ${dark.colors.main};
+                    color: ${dark.colors.backgroundAlt};
+                  }
+                }
+              `}
+            >
+              <span className="visually-hidden">${item.text}</span>
+              <span className="icon-container"><Icon /></span>
+              
+            </a>
         </li>
     ) 
 }
@@ -38,12 +68,6 @@ const ContactList = () => (
         margin-top: 70px;
         display: flex;
         justify-content: center;
-
-        /* to do: add links and hover/focus styles */
-        svg {
-          font-size: 2.5rem;
-          margin: 0 30px;
-        }
       `}
     >
       <ContactItem type="linkedin"/>
