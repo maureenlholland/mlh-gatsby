@@ -10,15 +10,15 @@ const Banner = () => (
     <div
       className="box"
       css={css`
-        transform: translateY(50%);
-        padding: 40px;
+        position: relative;
+        top: 30%;
       `}
     >
       <h1
         className="title"
         css={css`
           line-height: 1.3;
-          font-size: 60px;
+          font-size: 55px;
           margin: 0;
         `}
       >

@@ -3,6 +3,8 @@ import { css } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 
 import Image from './image'
+import LinkDeco1 from "../assets/link-deco-1.svg"
+import LinkDeco2 from "../assets/link-deco-2.svg"
 
 const Title = ({ title }) => {
     const theme = useTheme();
@@ -48,6 +50,8 @@ const Desc = ({ desc }) => <p css={css` grid-area: desc; margin-top: 25px;`}>{de
 
 const Link = ({ href, name }) => {
     const theme = useTheme();
+    const Deco = name === 'Live' ? LinkDeco1 : LinkDeco2;
+    const nbToFlip = name === 'Live' ? 1 : 2;
 
     return (
         <a
@@ -55,17 +59,43 @@ const Link = ({ href, name }) => {
                 grid-area: ${name.toLowerCase()};
                 text-decoration: none;
                 color: ${theme.colors.accent};
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 :nth-of-type(1) {
                     margin-top: 10px;
                 }
-                :nth-of-type(2) {
-                    margin-top: 20px;
+
+                svg {
+                    flex: 1 0 100px;
+                    stroke: ${theme.colors.accent};
+                    stroke-width: 1px;
+                    fill: transparent;
+                    :nth-of-type(${nbToFlip}) {
+                        transform: rotateY(180deg);
+                    }
+                }
+
+                .draw-me {
+                    stroke-dasharray: 500;
+                    stroke-dashoffset: 500;
+                    transition: stroke-dashoffset 0.5s;
+                }
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                    .draw-me {
+                        stroke-dashoffset: 0;
+                        transition: stroke-dashoffset ease-in 0.8s;
+                    }
                 }
             `}
             href={href}
         >
-                View {name}
+            <Deco/>
+            <span css={css`margin: 0 10px;`}>View {name}</span>
+            <Deco/>
         </a>
     );
 }
@@ -90,7 +120,7 @@ const Project = ({ project }) => {
             `}
         >
             <Image
-                styles={'grid-area: img; margin-top: 50px'}
+                styles={'grid-area: img; margin-top: 50px;'}
                 src={imageSrc}
                 alt={imageAlt}
             />

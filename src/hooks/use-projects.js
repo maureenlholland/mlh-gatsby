@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { useTheme } from 'emotion-theming';
 
 const useProjects= () => {
+    const theme = useTheme();
     const data = useStaticQuery(graphql`
         query {
             allMdx {

@@ -3,7 +3,8 @@ import { css, keyframes } from "@emotion/core"
 
 import { dark } from "./theme"
 
-// todo: break out menu toggle button, component too long
+// todo (refactor): break out menu toggle button, component too long
+// todo (a11y): proper tab trap on menu open, overlay outside content, menu closes on X click, outside menu click or ESC keypress
 
 const tiltDown = keyframes`
     0% {
@@ -126,17 +127,26 @@ const Menu = () => {
                     transition: left 0.5s;
     
                     li {
-                        padding: 5px 10px;
+                        padding: 10px;
                         text-align: center;
                     }
     
                     a {
                         display: block;
                         position: relative;
-                        padding: 5px;
-                        margin-bottom: 5px;
+                        padding: 3px 0;
+                        margin: 7px;
+                        line-height: 1;
                         text-decoration: none;
                         color: ${dark.colors.backgroundAlt};
+                        border: 2px solid transparent;
+                        transition: border-bottom 0.3s;
+
+                        :hover,
+                        :focus {
+                            border-bottom: 2px solid ${dark.colors.backgroundAlt};
+                            outline: 0;
+                        }
                     }
                 `}
             >

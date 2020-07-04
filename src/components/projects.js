@@ -13,7 +13,7 @@ const Projects = () => {
 
   return (
     <Section id="projects"
-      styles={`background: rgba(${rgbValues}, 0.8);`}
+      styles={`background: rgba(${rgbValues}, 0.8); padding-bottom:50px;`}
     >
       <Title content="Projects" />
       <ul>
