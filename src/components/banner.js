@@ -13,6 +13,11 @@ const Banner = () => (
         position: relative;
         top: 30%;
         padding: 60px 10px;
+        @media all and (min-width: 500px) {
+          width: 80%;
+          max-width: 900px;
+          margin: 0 auto;
+        }
       `}
     >
       <h1

@@ -14,14 +14,27 @@ const Quote = () => {
         padding: 20px;
       `}
     >
-      I want people to like my music, but I don't make my music for other people. If nobody heard my music, I would still make it. It's my life force, it's what I have to do to feel like a person.
-      <cite
+      <div
+        class="wrapper"
         css={css`
-          display: block;
-          text-align: right;
-          font-style: normal;
+          @media all and (min-width: 500px) {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
         `}
-      >- Santigold</cite>
+      >
+        I want people to like my music, but I don't make my music for other people. If nobody heard my music, I would still make it. It's my life force, it's what I have to do to feel like a person.
+        <cite
+          css={css`
+            display: block;
+            text-align: right;
+            font-style: normal;
+          `}
+        >- Santigold</cite>
+      </div>
     </blockquote>
   )
 }
