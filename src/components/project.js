@@ -62,12 +62,13 @@ const Link = ({ href, name }) => {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                white-space: nowrap;
                 :nth-of-type(1) {
                     margin-top: 10px;
                 }
 
                 svg {
-                    flex: 1 0 100px;
+                    flex: 1 1 100px;
                     stroke: ${theme.colors.accent};
                     stroke-width: 1px;
                     fill: transparent;
