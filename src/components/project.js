@@ -110,7 +110,7 @@ const Project = ({ project }) => {
         <li
             css={css`
                 display: grid;
-                grid-template-rows: 400px auto auto auto auto auto 20px;
+                grid-template-rows: 400px auto auto 1fr auto auto 20px;
                 grid-template-columns: 20px 1fr 20px;
                 grid-template-areas: 
                 "img img img"

@@ -1,5 +1,6 @@
 import React from "react"
 import { useTheme } from "emotion-theming"
+import { css } from '@emotion/core';
 
 import Section from './section'
 import Title from './title'
@@ -16,7 +17,16 @@ const Projects = () => {
       styles={`background: rgba(${rgbValues}, 0.8); padding:50px 0;`}
     >
       <Title content="Projects" />
-      <ul>
+      <ul
+        css={css`
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          column-gap: 40px;
+          width: 80%;
+          max-width: 1200px;
+          margin: 0 auto;
+        `}
+      >
         {projects.map(project => <Project key={project.id} project={project}/>)}
       </ul>
     </Section>

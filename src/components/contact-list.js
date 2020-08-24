@@ -17,7 +17,7 @@ const contact = {
     email: {
         text: 'Email',
         icon: FaEnvelope,
-        link: 'mailto: maureen.holland11@gmail.com"'
+        link: 'mailto: maureen.holland11@gmail.com'
     },
     github: {
         text: 'Github',

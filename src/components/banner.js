@@ -23,12 +23,9 @@ const Banner = () => (
       <h1
         className="title"
         css={css`
-          max-width: 350px;
-          width: 100%;
           text-align: center;
           line-height: 1.3;
           font-size: 55px;
-          margin: 0 auto;
         `}
       >
         Maureen Holland

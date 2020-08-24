@@ -16,7 +16,14 @@ const Header = () => (
         padding: 10px;
       `}
     >
-      <Menu />
+      <div
+        className="wrapper"
+        css={css`
+          max-width: 1400px;
+        `}
+      >
+        <Menu />
+      </div>
     </header>
 )
 

@@ -32,6 +32,8 @@ const Quote = () => {
             display: block;
             text-align: right;
             font-style: normal;
+            margin-top: 20px;
+            line-height: 1;
           `}
         >- Santigold</cite>
       </div>
