@@ -20,11 +20,15 @@ const Projects = () => {
       <ul
         css={css`
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-template-columns: 1fr;
+          justify-content: center;
           column-gap: 40px;
-          width: 80%;
-          max-width: 1200px;
-          margin: 0 auto;
+          @media all and (min-width: 500px) {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+          }
         `}
       >
         {projects.map(project => <Project key={project.id} project={project}/>)}

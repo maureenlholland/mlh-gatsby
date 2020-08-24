@@ -15,7 +15,7 @@ const Quote = () => {
       `}
     >
       <div
-        class="wrapper"
+        className="wrapper"
         css={css`
           @media all and (min-width: 500px) {
             width: 80%;

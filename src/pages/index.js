@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { ThemeProvider } from "emotion-theming"
 import { Global, css } from "@emotion/core"
+import Fade from 'react-reveal/Fade'
 
 import SEO from "../components/seo"
 import Header from "../components/header"
@@ -91,9 +92,11 @@ const App = () => {
         `}
       />
       <Banner/>
-      <About/>
-      <Quote/>
-      <Projects/>
+      <Fade bottom>
+        <About/>
+        <Quote/>
+        <Projects/>
+      </Fade>
       <Footer
         setDarkTheme={setDarkTheme}
         setLightTheme={setLightTheme}

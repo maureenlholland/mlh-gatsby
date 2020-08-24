@@ -35,6 +35,7 @@ const About = () => {
                 line-height: 1;
                 svg {
                   display: block;
+                  filter: drop-shadow(1px -1px 5px ${theme.colors.backgroundAlt});
                 }
               }
           `}
@@ -58,7 +59,7 @@ const About = () => {
               text-align: center;
               svg {
                 height: inherit;
-                filter: drop-shadow(2px -2px 3px ${theme.colors.backgroundAlt})
+                filter: drop-shadow(1px -1px 5px ${theme.colors.backgroundAlt});
               }
               @media all and (min-width: 500px) {
                 float: left;

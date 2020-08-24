@@ -95,7 +95,6 @@ const Link = ({ href, name }) => {
             `}
             href={href}
         >
-            {/* todo: fix responsiveness for less than 400px */}
             <Deco/>
             <span css={css`margin: 0 10px;`}>View {name}</span>
             <Deco/>
@@ -110,7 +109,7 @@ const Project = ({ project }) => {
         <li
             css={css`
                 display: grid;
-                grid-template-rows: 400px auto auto 1fr auto auto 20px;
+                grid-template-rows: 300px auto auto 1fr auto auto 20px;
                 grid-template-columns: 20px 1fr 20px;
                 grid-template-areas: 
                 "img img img"
