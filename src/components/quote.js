@@ -19,7 +19,7 @@ const Quote = () => {
         css={css`
           @media all and (min-width: 500px) {
             width: 80%;
-            max-width: 900px;
+            max-width: 600px;
             margin: 0 auto;
             padding-top: 40px;
             padding-bottom: 40px;

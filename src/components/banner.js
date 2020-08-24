@@ -15,7 +15,7 @@ const Banner = () => (
         padding: 60px 10px;
         @media all and (min-width: 500px) {
           width: 80%;
-          max-width: 900px;
+          max-width: 1200px;
           margin: 0 auto;
         }
       `}
