@@ -17,7 +17,6 @@ const Header = () => (
       `}
     >
       <div
-        className="wrapper"
         css={css`
           max-width: 1400px;
           margin: 0 auto;

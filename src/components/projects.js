@@ -24,10 +24,10 @@ const Projects = () => {
           justify-content: center;
           column-gap: 40px;
           @media all and (min-width: 500px) {
-            width: 95%;
-            max-width: 1200px;
-            margin: 0 auto;
             grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+          }
+          @media all and (min-width: 1024px) {
+            justify-content: flex-start;
           }
         `}
       >

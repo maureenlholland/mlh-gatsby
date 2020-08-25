@@ -71,13 +71,42 @@ const App = () => {
             text-align: center;
             text-transform: uppercase;
             font-size: 2rem;
-            font-weight: normal;
+            font-weight: lighter;
             line-height: 1;
+            @media all and (min-width: 500px) {
+              & {
+                font-size: 2.5rem;
+              }
+            }
+            @media all and (min-width: 1024px) {
+              & {
+                font-size: 3rem;
+              }
+              &:not(.title--center) {
+                text-align: left;
+              }
+            }
           }
 
           .box {
             border: 1px solid ${styles.colors.main};
             background: ${styles.colors.background};
+          }
+
+          .wrapper {
+            width: 100%;
+            margin: 0 auto;
+            @media all and (min-width: 500px) {
+              width: 80%;
+            }
+          }
+
+          .wrapper--large {
+            max-width: 1200px;
+          }
+
+          .wrapper--small {
+            max-width: 600px;
           }
         `}
       />

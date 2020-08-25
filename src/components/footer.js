@@ -18,7 +18,7 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
     `}
   >
     <div css={css`padding: 50px 20px;`}>
-    <Title content="Contact" />
+    <Title content="Contact" isCentered />
       <ContactList />
       <ThemeToggle
         setDarkTheme={setDarkTheme}

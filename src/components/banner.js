@@ -21,9 +21,8 @@ const Banner = () => (
       `}
     >
       <h1
-        className="title"
+        className="title title--center"
         css={css`
-          text-align: center;
           line-height: 1.3;
           font-size: 55px;
         `}
@@ -31,7 +30,7 @@ const Banner = () => (
         Maureen Holland
       </h1>
       <h2
-        className="title"
+        className="title title--center"
         css={css`
           margin-top: 20px;
           text-transform: lowercase;

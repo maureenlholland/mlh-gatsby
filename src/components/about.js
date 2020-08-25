@@ -11,13 +11,8 @@ const About = () => {
 
   return (
     <Section id="about">
-      <div className="wrapper"
+      <div
         css={css`
-          @media all and (min-width: 500px) {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-          }
           @media all and (min-width: 1024px) {
                 display: flex;
                 justify-content: space-between;
@@ -49,6 +44,12 @@ const About = () => {
             p:last-of-type {
               margin-bottom: 0;
             }
+            @media all and (min-width: 500px) {
+              padding: 35px 35px;
+            }
+            @media all and (min-width: 1024px) {
+              padding: 50px 50px;
+            }
           `}
         >
           <Title content="About" />
@@ -74,7 +75,7 @@ const About = () => {
           </div>
           <div className="content-container">
             <p>I decided to try coding while under-employed and watching Silicon Valley.</p>
-            <p>I had graduated from the University of Toronto with an Honours Bachelor of Arts in English and Cinema Studies. I figured the only transferable skill would be my ability to sit at computer typing for hours on end. Turns out I had spent enough time studying stories to absorb some valuable logic and creative problem solving skills as well. I bring a lot of empathy and adaptability to my web development work.</p>
+            <p>I had an Honours Bachelor of Arts in English and Cinema Studies from the University of Toronto and figured the only transferable skill would be my ability to sit at a computer typing for hours on end. Luckily, if you spend enough time studying stories, you absorb some valuable logic and creative problem solving skills as well. Along with this unconventional background, I bring a lot of empathy and adaptability to my web development work.</p>
             <p>My go-to coding music from Day 1 has been Santigold's 99&#162; album. I will listen to Run the Races on repeat. 381 times and counting.</p>
           </div>
         </div>
