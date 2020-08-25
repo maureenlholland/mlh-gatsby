@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { ThemeProvider } from "emotion-theming"
-import { Global, css } from "@emotion/core"
+import { Global, css, keyframes } from "@emotion/core"
 import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
@@ -108,8 +108,40 @@ const App = () => {
           .wrapper--small {
             max-width: 600px;
           }
+
+          .loading {
+            height: 100vh;
+            overflow: hidden;
+          }
+
+          .splash {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+            background: ${styles.colors.backgroundAlt};
+            color: ${styles.colors.accent};
+            font-size: 20vh;
+            transition: opacity 0.5s;
+            span {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%)
+            }
+          }
+
+          .loaded .splash {
+            opacity: 0;
+          }
         `}
       />
+      <div
+        className="splash"
+      >
+        <span>MH</span>
+      </div>
       <SEO title="Maureen Holland" />
       <Header/>
       <Bg

@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Maureen Holland`,
-    description: `writer and webdeveloper`,
+    description: `writer and web developer`,
     author: `Maureen Holland`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-mdx',
+    'gatsby-plugin-preload-fonts',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
