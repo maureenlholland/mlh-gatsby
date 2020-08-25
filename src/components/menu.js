@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { css, keyframes } from "@emotion/core"
+import Scrollchor from 'react-scrollchor';
 
 import { dark } from "./theme"
 
 // todo (refactor): break out menu toggle button, component too long
 // todo (a11y): proper tab trap on menu open, overlay outside content, menu closes on X click, outside menu click or ESC keypress
+// todo (refactor): useEffect hook to get dynamic size of topbar for offset of scroll
 
 const tiltDown = keyframes`
     0% {
@@ -151,13 +153,13 @@ const Menu = () => {
                 `}
             >
                 <li css={css`grid-area: about;`}>
-                    <a href="#about">About</a>
+                    <Scrollchor to="about" animate={{ offset: -150 }}>About</Scrollchor>
                 </li>
                 <li css={css`grid-area: projects;`}>
-                    <a href="#projects">Projects</a>
+                    <Scrollchor to="projects" animate={{ offset: -150 }}>Projects</Scrollchor>
                 </li>
                 <li css={css`grid-area: contact;`}>
-                    <a href="#contact">Contact</a>
+                    <Scrollchor to="contact" animate={{ offset: -150 }}>Contact</Scrollchor>
                 </li>
             </ul>
         </nav>
