@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { css, keyframes } from "@emotion/core"
 import Scrollchor from 'react-scrollchor';
 
 import { dark } from "./theme"
 
 // todo (refactor): break out menu toggle button, component too long
-// todo (a11y): proper tab trap on menu open, overlay outside content, menu closes on X click, outside menu click or ESC keypress
 // todo (refactor): useEffect hook to get dynamic size of topbar for offset of scroll
 
 const tiltDown = keyframes`
@@ -45,6 +44,21 @@ const disappear = keyframes`
 
 const Menu = () => {
     const [isExpanded, toggleExpanded] = useState(false)
+
+    useEffect(() => {
+        const closeMenu = (e) => {
+            if (e.key === 'Escape' & isExpanded) {
+                toggleExpanded(false);
+            }
+        };
+        
+        document.addEventListener('keydown', closeMenu)
+        
+        //unbind the event listener on unmount
+        return () => {
+          document.removeEventListener('keydown', closeMenu)
+        }
+      }, []); // Empty parentheses will cause this to run once at mount
 
     return (
         <nav>
