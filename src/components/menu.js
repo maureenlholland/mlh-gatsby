@@ -58,7 +58,7 @@ const Menu = () => {
         return () => {
           document.removeEventListener('keydown', closeMenu)
         }
-      }, []); // Empty parentheses will cause this to run once at mount
+      });
 
     return (
         <nav>

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { ThemeProvider } from "emotion-theming"
-import { Global, css, keyframes } from "@emotion/core"
+import { Global, css } from "@emotion/core"
 import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
