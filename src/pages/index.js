@@ -12,6 +12,8 @@ import Projects from "../components/projects"
 import Footer from "../components/footer"
 import { dark, light } from "../components/theme"
 import Bg from "../assets/bg.svg"
+import palette from "../images/palette.svg"
+import pencil from "../images/pencil.svg"
 
 const App = () => {
   const [theme, setTheme] = useState("dark")
@@ -51,6 +53,12 @@ const App = () => {
             fill: none;
             stroke-miterlimit: 10;
             stroke-width: 0.75px;
+          }
+          [data-colors="false"]:hover {
+            cursor: url(${palette}), pointer;
+          }
+          [data-colors="true"]:hover {
+            cursor: url(${pencil}), pointer;
           }
           [data-colors="true"] .b {
             fill: #f2d6a3;
