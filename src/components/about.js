@@ -76,17 +76,11 @@ const About = () => {
           <div className="content-container">
             <p>
               I am a Fullstack freelance developer currently based in Durham,
-              UK.
-            </p>
-            <p>
-              I graduated from the University of Toronto with an Honours
-              Bachelor of Arts in English and Cinema Studies and bring a lot of
-              empathy and adaptability to my web development work.
-            </p>
-            <p>
-              My go-to coding music from Day 1 has been Santigold's 99&#162;
-              album. I will listen to Run the Races on repeat. 424 times and
-              counting.
+              UK. As a graduate from University of Toronto with an Honours
+              Bachelor of Arts in English and Cinema Studies, I bring a lot of
+              empathy and adaptability to web development work. Coding
+              soundtrack from Day 1 has been Santigold's 99&#162; album. I will
+              listen to Run the Races on repeat. 424 times and counting.
             </p>
           </div>
         </div>
