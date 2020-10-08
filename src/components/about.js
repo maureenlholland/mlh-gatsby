@@ -2,8 +2,8 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useTheme } from "emotion-theming"
 
-import Section from './section'
-import Title from './title'
+import Section from "./section"
+import Title from "./title"
 import Pic from "../assets/mh-pic.svg"
 
 const About = () => {
@@ -14,10 +14,10 @@ const About = () => {
       <div
         css={css`
           @media all and (min-width: 1024px) {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-              }
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          }
         `}
       >
         <div
@@ -25,14 +25,14 @@ const About = () => {
           css={css`
             display: none;
             @media all and (min-width: 1024px) {
+              display: block;
+              min-width: 350px;
+              line-height: 1;
+              svg {
                 display: block;
-                min-width: 350px;
-                line-height: 1;
-                svg {
-                  display: block;
-                  filter: drop-shadow(1px -1px 5px ${theme.colors.backgroundAlt});
-                }
+                filter: drop-shadow(1px -1px 5px ${theme.colors.backgroundAlt});
               }
+            }
           `}
         >
           <Pic />
@@ -74,14 +74,25 @@ const About = () => {
             <Pic />
           </div>
           <div className="content-container">
-            <p>I decided to try coding while under-employed and watching Silicon Valley.</p>
-            <p>I had an Honours Bachelor of Arts in English and Cinema Studies from the University of Toronto and figured the only transferable skill would be my ability to sit at a computer typing for hours on end. Luckily, if you spend enough time studying stories, you absorb some valuable logic and creative problem solving skills as well. Along with this unconventional background, I bring a lot of empathy and adaptability to my web development work.</p>
-            <p>My go-to coding music from Day 1 has been Santigold's 99&#162; album. I will listen to Run the Races on repeat. 381 times and counting.</p>
+            <p>
+              I am a Fullstack freelance developer currently based in Durham,
+              UK.
+            </p>
+            <p>
+              I graduated from the University of Toronto with an Honours
+              Bachelor of Arts in English and Cinema Studies and bring a lot of
+              empathy and adaptability to my web development work.
+            </p>
+            <p>
+              My go-to coding music from Day 1 has been Santigold's 99&#162;
+              album. I will listen to Run the Races on repeat. 424 times and
+              counting.
+            </p>
           </div>
         </div>
       </div>
     </Section>
-  );
+  )
 }
 
 export default About
