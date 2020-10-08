@@ -4,7 +4,7 @@ import { useTheme } from "emotion-theming"
 
 import Section from "./section"
 import Title from "./title"
-import Pic from "../assets/mh-pic.svg"
+import ProfilePic from "./profile-pic"
 
 const About = () => {
   const theme = useTheme()
@@ -30,12 +30,11 @@ const About = () => {
               line-height: 1;
               svg {
                 display: block;
-                filter: drop-shadow(1px -1px 5px ${theme.colors.backgroundAlt});
               }
             }
           `}
         >
-          <Pic />
+          <ProfilePic />
         </div>
         <div
           className="box"
@@ -58,10 +57,6 @@ const About = () => {
             css={css`
               height: 200px;
               text-align: center;
-              svg {
-                height: inherit;
-                filter: drop-shadow(1px -1px 5px ${theme.colors.backgroundAlt});
-              }
               @media all and (min-width: 500px) {
                 float: left;
                 margin-right: 20px;
@@ -71,7 +66,7 @@ const About = () => {
               }
             `}
           >
-            <Pic />
+            <ProfilePic />
           </div>
           <div className="content-container">
             <p>

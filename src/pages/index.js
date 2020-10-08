@@ -10,23 +10,81 @@ import About from "../components/about"
 import Quote from "../components/quote"
 import Projects from "../components/projects"
 import Footer from "../components/footer"
-import { dark, light } from '../components/theme'
+import { dark, light } from "../components/theme"
 import Bg from "../assets/bg.svg"
 
 const App = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark")
 
   // todo => persist user choice on return visit
-  const setDarkTheme = () => setTheme('dark');
-  const setLightTheme = () => setTheme('light');
+  const setDarkTheme = () => setTheme("dark")
+  const setLightTheme = () => setTheme("light")
 
   // check order of operations, rendering
-  const styles = theme === 'dark' ? dark : light;
+  const styles = theme === "dark" ? dark : light
 
   return (
     <ThemeProvider theme={styles}>
       <Global
         styles={css`
+          /* svg test */
+          .b,
+          .c,
+          .d,
+          .f,
+          .g,
+          .h,
+          .i,
+          .k,
+          .l {
+            fill: ${styles.colors.background};
+            stroke: #f2d6a3;
+          }
+          .c,
+          .l {
+            opacity: 0.2;
+          }
+          .e {
+            opacity: 0.5;
+          }
+          .h {
+            fill: none;
+            stroke-miterlimit: 10;
+            stroke-width: 0.75px;
+          }
+          [data-colors="true"] .b {
+            fill: #f2d6a3;
+            stroke: transparent;
+          }
+          [data-colors="true"] .c {
+            fill: gray;
+          }
+          [data-colors="true"] .d {
+            fill: #ffebf0;
+            stroke: transparent;
+          }
+          [data-colors="true"] .f {
+            fill: #fff;
+            stroke: transparent;
+          }
+          [data-colors="true"] .g {
+            fill: #ffd3dd;
+            stroke: transparent;
+          }
+          [data-colors="true"] .i {
+            fill: #d81e5b;
+            stroke: transparent;
+          }
+          [data-colors="true"] .k {
+            fill: #66b9cc;
+            stroke: transparent;
+          }
+          [data-colors="true"] .l {
+            fill: #4d4d4d;
+            stroke: transparent;
+            opacity: 1;
+          }
+
           *,
           *::after,
           *::before {
@@ -37,7 +95,7 @@ const App = () => {
           h1,
           h2,
           h3,
-          ul, 
+          ul,
           li {
             margin: 0;
           }
@@ -50,7 +108,7 @@ const App = () => {
           body {
             background: ${styles.colors.background};
             color: ${styles.colors.main};
-            font-family: 'josefin sans';
+            font-family: "josefin sans";
             font-size: 18px;
             transition: background 0.2s, color 0.2s;
             line-height: 1.8;
@@ -58,12 +116,12 @@ const App = () => {
 
           /* from Scott O'Hara: https://css-tricks.com/inclusively-hidden/ */
           .visually-hidden {
-            clip: rect(0 0 0 0); 
+            clip: rect(0 0 0 0);
             clip-path: inset(50%);
             height: 1px;
             overflow: hidden;
             position: absolute;
-            white-space: nowrap; 
+            white-space: nowrap;
             width: 1px;
           }
 
@@ -128,7 +186,7 @@ const App = () => {
               position: absolute;
               top: 50%;
               left: 50%;
-              transform: translate(-50%, -50%)
+              transform: translate(-50%, -50%);
             }
           }
 
@@ -137,13 +195,11 @@ const App = () => {
           }
         `}
       />
-      <div
-        className="splash"
-      >
+      <div className="splash">
         <span>MH</span>
       </div>
       <SEO title="Maureen Holland" />
-      <Header/>
+      <Header />
       <Bg
         css={css`
           width: 100%;
@@ -152,16 +208,13 @@ const App = () => {
           z-index: -1;
         `}
       />
-      <Banner/>
+      <Banner />
       <Fade bottom>
-        <About/>
-        <Quote/>
-        <Projects/>
+        <About />
+        <Quote />
+        <Projects />
       </Fade>
-      <Footer
-        setDarkTheme={setDarkTheme}
-        setLightTheme={setLightTheme}
-      />
+      <Footer setDarkTheme={setDarkTheme} setLightTheme={setLightTheme} />
     </ThemeProvider>
   )
 }
