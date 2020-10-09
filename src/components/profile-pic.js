@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { css } from "@emotion/core"
 
 const ProfilePic = () => {
   const [skinColor, setSkinColor] = useState(false)
@@ -15,6 +16,11 @@ const ProfilePic = () => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="50 50 200 250"
       preserveAspectRatio="xMidYMid meet"
+      css={css`
+        width: 100%;
+        height: 100%;
+        display: block;
+      `}
     >
       <g
         id="bun"

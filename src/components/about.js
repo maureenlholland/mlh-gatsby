@@ -28,9 +28,6 @@ const About = () => {
               display: block;
               min-width: 350px;
               line-height: 1;
-              svg {
-                display: block;
-              }
             }
           `}
         >
@@ -55,8 +52,8 @@ const About = () => {
           <div
             className="image-container image-container--mobile"
             css={css`
-              height: 200px;
-              text-align: center;
+              width: 150px;
+              margin: 0 auto;
               @media all and (min-width: 500px) {
                 float: left;
                 margin-right: 20px;
