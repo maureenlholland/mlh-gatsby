@@ -50,15 +50,15 @@ const App = () => {
             opacity: 0.5;
           }
           .h {
-            fill: none;
+            fill: transparent;
             stroke-miterlimit: 10;
             stroke-width: 0.75px;
           }
           [data-colors="false"]:hover {
-            cursor: url(${palette}), pointer;
+            cursor: url(${palette}) 10 10, pointer;
           }
           [data-colors="true"]:hover {
-            cursor: url(${pencil}), pointer;
+            cursor: url(${pencil}) 10 10, pointer;
           }
           [data-colors="true"] .b {
             fill: #f2d6a3;
