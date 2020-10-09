@@ -21,6 +21,9 @@ const Banner = () => (
         css={css`
           line-height: 1.3;
           font-size: 55px;
+          @media all and (min-width: 1024px) {
+            font-size: 80px;
+          }
         `}
       >
         Maureen Holland
@@ -31,6 +34,9 @@ const Banner = () => (
           margin-top: 20px;
           text-transform: lowercase;
           font-size: 1.5rem;
+          @media all and (min-width: 1024px) {
+            font-size: 2rem;
+          }
         `}
       >
         writer &amp; web developer
