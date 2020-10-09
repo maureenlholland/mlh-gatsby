@@ -158,7 +158,7 @@ const App = () => {
             text-align: center;
             text-transform: uppercase;
             font-size: 2rem;
-            font-weight: lighter;
+            font-weight: normal;
             line-height: 1;
             @media all and (min-width: 500px) {
               & {
@@ -167,10 +167,7 @@ const App = () => {
             }
             @media all and (min-width: 1024px) {
               & {
-                font-size: 3rem;
-              }
-              &:not(.title--center) {
-                text-align: left;
+                font-size: 3.5rem;
               }
             }
           }

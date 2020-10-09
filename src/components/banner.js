@@ -13,23 +13,23 @@ const Banner = () => (
       css={css`
         position: relative;
         top: 30%;
-        padding: 60px 10px;
+        padding: 60px;
       `}
     >
       <h1
-        className="title title--center"
+        className="title"
         css={css`
           line-height: 1.3;
           font-size: 55px;
           @media all and (min-width: 1024px) {
-            font-size: 80px;
+            font-size: 70px;
           }
         `}
       >
         Maureen Holland
       </h1>
       <h2
-        className="title title--center"
+        className="title"
         css={css`
           margin-top: 20px;
           text-transform: lowercase;
