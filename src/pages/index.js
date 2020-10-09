@@ -104,6 +104,22 @@ const App = () => {
             color: ${styles.colors.backgroundAlt};
           }
 
+          /* Scrollbar styles from Piccalilli's awesome 11ty course: https://piccalil.li/course/learn-eleventy-from-scratch/ */
+          ::-webkit-scrollbar {
+            height: 1rem;
+          }
+
+          ::-webkit-scrollbar-track {
+            background-color: transparent;
+            border: 1px solid ${styles.colors.accent};
+            border-radius: 0.25rem;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background-color: ${styles.colors.accent};
+            border-radius: 0.25rem;
+          }
+
           body,
           h1,
           h2,
