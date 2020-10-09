@@ -99,6 +99,11 @@ const App = () => {
             box-sizing: border-box;
           }
 
+          ::selection {
+            background: ${styles.colors.accent};
+            color: ${styles.colors.backgroundAlt};
+          }
+
           body,
           h1,
           h2,
