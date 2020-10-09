@@ -40,7 +40,7 @@ const App = () => {
           .k,
           .l {
             fill: ${styles.colors.background};
-            stroke: #f2d6a3;
+            stroke: ${styles.colors.accent};
           }
           .c,
           .l {
@@ -78,6 +78,9 @@ const App = () => {
           [data-colors="true"] .g {
             fill: #ffd3dd;
             stroke: transparent;
+          }
+          [data-colors="true"] .h {
+            stroke: #f2d6a3;
           }
           [data-colors="true"] .i {
             fill: #d81e5b;
