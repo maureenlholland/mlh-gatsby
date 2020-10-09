@@ -7,17 +7,13 @@ const Banner = () => (
       height: 100vh;
     `}
   >
+    {/* <div className="wrapper wrapper--large"> */}
     <div
-      className="box"
+      className="box | wrapper wrapper--large"
       css={css`
         position: relative;
         top: 30%;
         padding: 60px 10px;
-        @media all and (min-width: 500px) {
-          width: 80%;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
       `}
     >
       <h1
@@ -35,11 +31,12 @@ const Banner = () => (
           margin-top: 20px;
           text-transform: lowercase;
           font-size: 1.5rem;
-      `}
+        `}
       >
         writer &amp; web developer
       </h2>
     </div>
+    {/* </div> */}
   </section>
 )
 

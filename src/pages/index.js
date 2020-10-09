@@ -168,11 +168,11 @@ const App = () => {
           }
 
           .wrapper--large {
-            max-width: 1200px;
+            max-width: 1000px;
           }
 
           .wrapper--small {
-            max-width: 600px;
+            max-width: 500px;
           }
 
           .loading {

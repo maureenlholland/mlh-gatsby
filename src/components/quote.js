@@ -18,13 +18,14 @@ const Quote = () => {
         className="wrapper wrapper--small"
         css={css`
           @media all and (min-width: 500px) {
-            max-width: 600px;
             padding-top: 40px;
             padding-bottom: 40px;
           }
         `}
       >
-        I want people to like my music, but I don't make my music for other people. If nobody heard my music, I would still make it. It's my life force, it's what I have to do to feel like a person.
+        I want people to like my music, but I don't make my music for other
+        people. If nobody heard my music, I would still make it. It's my life
+        force, it's what I have to do to feel like a person.
         <cite
           css={css`
             display: block;
@@ -33,7 +34,9 @@ const Quote = () => {
             margin-top: 20px;
             line-height: 1;
           `}
-        >- Santigold</cite>
+        >
+          - Santigold
+        </cite>
       </div>
     </blockquote>
   )
