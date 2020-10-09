@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
 const ProfilePic = () => {
-  const [bunColor, setBunColor] = useState(false)
   const [skinColor, setSkinColor] = useState(false)
   const [hairColor, setHairColor] = useState(false)
   const [shadowColor, setShadowColor] = useState(false)
@@ -17,7 +16,11 @@ const ProfilePic = () => {
       viewBox="50 50 200 250"
       preserveAspectRatio="xMidYMid meet"
     >
-      <g id="bun" data-colors={bunColor} onClick={() => setBunColor(!bunColor)}>
+      <g
+        id="bun"
+        data-colors={hairColor}
+        onClick={() => setHairColor(!hairColor)}
+      >
         <circle className="b" cx="97.96" cy="205.34" r="25.63" />
         <circle className="c" cx="97.96" cy="205.34" r="25.63" />
       </g>
