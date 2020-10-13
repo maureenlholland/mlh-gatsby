@@ -19,16 +19,16 @@ const Projects = () => {
     >
       <Title content="Projects" />
       <ul
+        // horizontal scrolling css adapted from Piccalilli's awesome 11ty course: https://piccalil.li/course/learn-eleventy-from-scratch/
         css={css`
-          display: grid;
-          grid-template-columns: 1fr;
-          justify-content: center;
-          column-gap: 40px;
-          @media all and (min-width: 500px) {
-            grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
-          }
-          @media all and (min-width: 1024px) {
-            justify-content: flex-start;
+          display: flex;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+
+          > * {
+            width: 320px;
+            flex-shrink: 0;
+            margin-right: 50px;
           }
         `}
       >

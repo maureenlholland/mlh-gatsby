@@ -3,10 +3,9 @@ import { css } from "@emotion/core"
 
 import { dark } from "./theme"
 import Title from "./title"
-import ContactList from "./contact-list";
-import ThemeToggle from "./theme-toggle";
-import { FaRegCopyright } from "react-icons/fa";
-
+import ContactList from "./contact-list"
+import ThemeToggle from "./theme-toggle"
+import { FaRegCopyright } from "react-icons/fa"
 
 const Footer = ({ setLightTheme, setDarkTheme }) => (
   <footer
@@ -28,13 +27,14 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
       }
     `}
   >
-    <div css={css`padding: 50px 20px;`}>
-    <Title content="Contact" isCentered />
+    <div
+      css={css`
+        padding: 50px 20px;
+      `}
+    >
+      <Title content="Contact" />
       <ContactList />
-      <ThemeToggle
-        setDarkTheme={setDarkTheme}
-        setLightTheme={setLightTheme}
-      />
+      <ThemeToggle setDarkTheme={setDarkTheme} setLightTheme={setLightTheme} />
     </div>
     <p
       css={css`
@@ -45,7 +45,11 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
         padding: 3px;
       `}
     >
-      <FaRegCopyright/> 2020. Design and Profile Illustration by <a className="design-link" href="https://johnhollandstudio.com/">John Holland Studio</a>.
+      <FaRegCopyright /> 2020. Design and Profile Illustration by{" "}
+      <a className="design-link" href="https://johnhollandstudio.com/">
+        John Holland Studio
+      </a>
+      .
     </p>
   </footer>
 )

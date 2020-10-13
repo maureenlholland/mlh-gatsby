@@ -40,7 +40,7 @@ const App = () => {
           .k,
           .l {
             fill: ${styles.colors.background};
-            stroke: #f2d6a3;
+            stroke: ${styles.colors.accent};
           }
           .c,
           .l {
@@ -79,6 +79,9 @@ const App = () => {
             fill: #ffd3dd;
             stroke: transparent;
           }
+          [data-colors="true"] .h {
+            stroke: #f2d6a3;
+          }
           [data-colors="true"] .i {
             fill: #d81e5b;
             stroke: transparent;
@@ -97,6 +100,27 @@ const App = () => {
           *::after,
           *::before {
             box-sizing: border-box;
+          }
+
+          ::selection {
+            background: ${styles.colors.accent};
+            color: ${styles.colors.backgroundAlt};
+          }
+
+          /* Scrollbar styles from Piccalilli's awesome 11ty course: https://piccalil.li/course/learn-eleventy-from-scratch/ */
+          ::-webkit-scrollbar {
+            height: 1rem;
+          }
+
+          ::-webkit-scrollbar-track {
+            background-color: transparent;
+            border: 1px solid ${styles.colors.accent};
+            border-radius: 0.25rem;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background-color: ${styles.colors.accent};
+            border-radius: 0.25rem;
           }
 
           body,
@@ -137,7 +161,7 @@ const App = () => {
             text-align: center;
             text-transform: uppercase;
             font-size: 2rem;
-            font-weight: lighter;
+            font-weight: normal;
             line-height: 1;
             @media all and (min-width: 500px) {
               & {
@@ -146,10 +170,7 @@ const App = () => {
             }
             @media all and (min-width: 1024px) {
               & {
-                font-size: 3rem;
-              }
-              &:not(.title--center) {
-                text-align: left;
+                font-size: 3.5rem;
               }
             }
           }
