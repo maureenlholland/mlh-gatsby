@@ -218,9 +218,11 @@ const App = () => {
       />
       <Banner />
       <Fade bottom>
-        <About />
-        <Quote />
-        <Projects />
+        <main>
+          <About />
+          <Quote />
+          <Projects />
+        </main>
       </Fade>
       <Footer setDarkTheme={setDarkTheme} setLightTheme={setLightTheme} />
     </ThemeProvider>

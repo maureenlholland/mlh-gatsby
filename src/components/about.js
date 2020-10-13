@@ -23,8 +23,10 @@ const About = () => {
         <div
           className="image-container image-container--desktop"
           css={css`
+            visibility: hidden;
             display: none;
             @media all and (min-width: 1024px) {
+              visibility: visible;
               display: block;
               min-width: 350px;
               line-height: 1;
@@ -55,7 +57,7 @@ const About = () => {
           <div
             className="image-container image-container--mobile"
             css={css`
-              height: 200px;
+              width: 150px;
               text-align: center;
               @media all and (min-width: 500px) {
                 float: left;
@@ -63,6 +65,7 @@ const About = () => {
               }
               @media all and (min-width: 1024px) {
                 display: none;
+                visibility: hidden;
               }
             `}
           >
