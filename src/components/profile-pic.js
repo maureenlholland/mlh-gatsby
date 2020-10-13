@@ -84,7 +84,7 @@ const ProfilePic = () => {
         data-colors={mouthColor}
         onClick={() => setMouthColor(!mouthColor)}
       >
-        <g id="nose" pointer-events="none">
+        <g id="nose" pointerEvents="none">
           <path
             className="h"
             d="M143.92,207s-2.56,10.66,4.84,9.31,7.39,2.77,7.39,2.77"
