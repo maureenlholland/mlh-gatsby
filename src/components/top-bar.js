@@ -4,8 +4,9 @@ import { css } from "@emotion/core"
 import { dark } from "./theme"
 import Menu from "./menu"
 
-const Header = () => (
-  <header
+const TopBar = () => (
+  <section
+    className="top-bar"
     css={css`
       color: ${dark.colors.accent};
       background: ${dark.colors.backgroundAlt};
@@ -19,7 +20,7 @@ const Header = () => (
     <div className="wrapper wrapper--large">
       <Menu />
     </div>
-  </header>
+  </section>
 )
 
-export default Header
+export default TopBar
