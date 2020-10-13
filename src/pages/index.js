@@ -4,7 +4,7 @@ import { Global, css } from "@emotion/core"
 import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
-import Header from "../components/header"
+import TopBar from "../components/top-bar"
 import Banner from "../components/banner"
 import About from "../components/about"
 import Quote from "../components/quote"
@@ -207,16 +207,19 @@ const App = () => {
         <span>MH</span>
       </div>
       <SEO title="Maureen Holland" />
-      <Header />
-      <Bg
-        css={css`
-          width: 100%;
-          height: 100vh;
-          position: fixed;
-          z-index: -1;
-        `}
-      />
-      <Banner />
+      <header>
+        <TopBar />
+        <Bg
+          aria-hidden="true"
+          css={css`
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            z-index: -1;
+          `}
+        />
+        <Banner />
+      </header>
       <Fade bottom>
         <main>
           <About />

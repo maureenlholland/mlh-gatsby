@@ -7,7 +7,6 @@ const Banner = () => (
       height: 100vh;
     `}
   >
-    {/* <div className="wrapper wrapper--large"> */}
     <div
       className="box | wrapper wrapper--large"
       css={css`
@@ -36,7 +35,6 @@ const Banner = () => (
         writer &amp; web developer
       </h2>
     </div>
-    {/* </div> */}
   </section>
 )
 
