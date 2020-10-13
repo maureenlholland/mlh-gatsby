@@ -6,16 +6,17 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-mdx',
-    'gatsby-plugin-preload-fonts',
+    "gatsby-plugin-mdx",
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `josefin sans\:300,400`,
+          {
+            family: `Josefin Sans`,
+            variants: [`300`, `400`],
+          },
         ],
-        display: 'swap'
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,9 +38,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
