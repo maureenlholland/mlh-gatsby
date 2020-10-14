@@ -9,6 +9,8 @@ import ProfilePic from "./profile-pic"
 const About = () => {
   const theme = useTheme()
 
+  console.log(theme)
+
   return (
     <Section id="about">
       <div

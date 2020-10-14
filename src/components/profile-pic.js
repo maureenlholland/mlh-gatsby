@@ -1,5 +1,9 @@
 import React, { useState } from "react"
 import { css } from "@emotion/core"
+import { useTheme } from "emotion-theming"
+
+import palette from "../images/palette.svg"
+import pencil from "../images/pencil.svg"
 
 const ProfilePic = () => {
   const [skinColor, setSkinColor] = useState(false)
@@ -9,6 +13,8 @@ const ProfilePic = () => {
   const [eyeColor, setEyeColor] = useState(false)
   // need to set refs on groups
   // click event listeners toggle data-colors attribute
+
+  const theme = useTheme()
 
   return (
     <svg
@@ -20,6 +26,71 @@ const ProfilePic = () => {
         width: 100%;
         height: 100%;
         display: block;
+        .b,
+        .c,
+        .d,
+        .f,
+        .g,
+        .h,
+        .i,
+        .k,
+        .l {
+          fill: ${theme.colors.background};
+          stroke: ${theme.colors.accent};
+        }
+        .c,
+        .l {
+          opacity: 0.2;
+        }
+        .e {
+          opacity: 0.5;
+        }
+        .h {
+          fill: transparent;
+          stroke-miterlimit: 10;
+          stroke-width: 0.75px;
+        }
+        [data-colors="false"]:hover {
+          cursor: url(${palette}) 10 10, pointer;
+        }
+        [data-colors="true"]:hover {
+          cursor: url(${pencil}) 10 10, pointer;
+        }
+        [data-colors="true"] .b {
+          fill: #f2d6a3;
+          stroke: transparent;
+        }
+        [data-colors="true"] .c {
+          fill: gray;
+        }
+        [data-colors="true"] .d {
+          fill: #ffebf0;
+          stroke: transparent;
+        }
+        [data-colors="true"] .f {
+          fill: #fff;
+          stroke: transparent;
+        }
+        [data-colors="true"] .g {
+          fill: #ffd3dd;
+          stroke: transparent;
+        }
+        [data-colors="true"] .h {
+          stroke: #f2d6a3;
+        }
+        [data-colors="true"] .i {
+          fill: #d81e5b;
+          stroke: transparent;
+        }
+        [data-colors="true"] .k {
+          fill: #66b9cc;
+          stroke: transparent;
+        }
+        [data-colors="true"] .l {
+          fill: #4d4d4d;
+          stroke: transparent;
+          opacity: 1;
+        }
       `}
     >
       <g
