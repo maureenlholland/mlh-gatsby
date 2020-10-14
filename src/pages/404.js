@@ -1,26 +1,14 @@
 import React, { useState } from "react"
 import { ThemeProvider } from "emotion-theming"
 import { Global, css } from "@emotion/core"
-import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
-import TopBar from "../components/top-bar"
-import Banner from "../components/banner"
-import About from "../components/about"
-import Quote from "../components/quote"
-import Projects from "../components/projects"
-import Footer from "../components/footer"
+import NotFound from "../components/not-found"
 import { dark, light } from "../components/theme"
 import Bg from "../assets/bg.svg"
-import palette from "../images/palette.svg"
-import pencil from "../images/pencil.svg"
 
-const App = () => {
+const Page404 = () => {
   const [theme, setTheme] = useState("dark")
-
-  // todo => persist user choice on return visit
-  const setDarkTheme = () => setTheme("dark")
-  const setLightTheme = () => setTheme("light")
 
   // check order of operations, rendering
   const styles = theme === "dark" ? dark : light
@@ -29,73 +17,6 @@ const App = () => {
     <ThemeProvider theme={styles}>
       <Global
         styles={css`
-          /* svg test */
-          .b,
-          .c,
-          .d,
-          .f,
-          .g,
-          .h,
-          .i,
-          .k,
-          .l {
-            fill: ${styles.colors.background};
-            stroke: ${styles.colors.accent};
-          }
-          .c,
-          .l {
-            opacity: 0.2;
-          }
-          .e {
-            opacity: 0.5;
-          }
-          .h {
-            fill: transparent;
-            stroke-miterlimit: 10;
-            stroke-width: 0.75px;
-          }
-          [data-colors="false"]:hover {
-            cursor: url(${palette}) 10 10, pointer;
-          }
-          [data-colors="true"]:hover {
-            cursor: url(${pencil}) 10 10, pointer;
-          }
-          [data-colors="true"] .b {
-            fill: #f2d6a3;
-            stroke: transparent;
-          }
-          [data-colors="true"] .c {
-            fill: gray;
-          }
-          [data-colors="true"] .d {
-            fill: #ffebf0;
-            stroke: transparent;
-          }
-          [data-colors="true"] .f {
-            fill: #fff;
-            stroke: transparent;
-          }
-          [data-colors="true"] .g {
-            fill: #ffd3dd;
-            stroke: transparent;
-          }
-          [data-colors="true"] .h {
-            stroke: #f2d6a3;
-          }
-          [data-colors="true"] .i {
-            fill: #d81e5b;
-            stroke: transparent;
-          }
-          [data-colors="true"] .k {
-            fill: #66b9cc;
-            stroke: transparent;
-          }
-          [data-colors="true"] .l {
-            fill: #4d4d4d;
-            stroke: transparent;
-            opacity: 1;
-          }
-
           *,
           *::after,
           *::before {
@@ -236,12 +157,8 @@ const App = () => {
           }
         `}
       />
-      <div className="splash">
-        <span>MH</span>
-      </div>
       <SEO title="Maureen Holland" />
       <header>
-        <TopBar />
         <Bg
           aria-hidden="true"
           css={css`
@@ -251,18 +168,10 @@ const App = () => {
             z-index: -1;
           `}
         />
-        <Banner />
+        <NotFound />
       </header>
-      <Fade bottom>
-        <main>
-          <About />
-          <Quote />
-          <Projects />
-        </main>
-      </Fade>
-      <Footer setDarkTheme={setDarkTheme} setLightTheme={setLightTheme} />
     </ThemeProvider>
   )
 }
 
-export default App
+export default Page404
