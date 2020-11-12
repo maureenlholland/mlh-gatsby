@@ -46,8 +46,8 @@ const Footer = ({ setLightTheme, setDarkTheme }) => (
       `}
     >
       <FaRegCopyright /> 2020. Design and Profile Illustration by{" "}
-      <a className="design-link" href="https://johnhollandstudio.com/">
-        John Holland Studio
+      <a className="design-link" href="https://johnholland.design/">
+        johnholland.design
       </a>
       .
     </p>
